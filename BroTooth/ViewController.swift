@@ -23,7 +23,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate {
     
     @IBAction func didPressTeacherButton(sender: AnyObject) {
         self.myCentralManager = CBCentralManager(delegate: self, queue: nil)
-        let fiveUUID = CBUUID(string: "Five")
+        //let fiveUUID = CBUUID(string: "Five")
          self.myCentralManager.scanForPeripheralsWithServices([myCustomServiceUUID], options: nil)
     }
     

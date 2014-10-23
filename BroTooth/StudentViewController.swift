@@ -19,15 +19,13 @@ class StudentViewController: UIViewController, CBPeripheralManagerDelegate {
 self.view.backgroundColor = UIColor.greenColor()
         
         self.myPeripheralManager = CBPeripheralManager(delegate: self, queue: nil)
-        var myService = CBMutableService(type: myCustomServiceUUID, primary: true)
-        self.myPeripheralManager.addService(myService)
         
-        
-    
         // Do any additional setup after loading the view.
     }
     
     func peripheralManager(peripheral: CBPeripheralManager!, didAddService service: CBService!, error: NSError!) {
+        println("added service")
+        
         if error != nil {
             println(error.localizedDescription)
         } else {
@@ -45,6 +43,8 @@ self.view.backgroundColor = UIColor.greenColor()
     
     func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!) {
         println("peripheral Manager did update state!")
+        var myService = CBMutableService(type: myCustomServiceUUID, primary: true)
+        self.myPeripheralManager.addService(myService)
     }
     
     override func didReceiveMemoryWarning() {
