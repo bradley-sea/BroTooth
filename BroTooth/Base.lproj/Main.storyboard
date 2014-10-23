@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BroTooth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52f-Ah-uxJ">
+                                <rect key="frame" x="235" y="285" width="129" height="30"/>
+                                <state key="normal" title="Hello I Am Teacher">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressTeacherButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tr9-QG-Agd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBI-w7-LvV">
+                                <rect key="frame" x="235.5" y="360" width="129" height="30"/>
+                                <state key="normal" title="Hello I Am Student">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gcI-nc-JxP" kind="presentation" id="V0Q-ar-SYN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="52f-Ah-uxJ" secondAttribute="centerY" id="6gh-EN-ISw"/>
+                            <constraint firstAttribute="centerX" secondItem="52f-Ah-uxJ" secondAttribute="centerX" id="7wk-cC-duB"/>
+                            <constraint firstAttribute="centerX" secondItem="pBI-w7-LvV" secondAttribute="centerX" id="NFU-nl-vb7"/>
+                            <constraint firstItem="pBI-w7-LvV" firstAttribute="top" secondItem="52f-Ah-uxJ" secondAttribute="bottom" constant="45" id="tOO-jn-wED"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="342" y="347"/>
+        </scene>
+        <!--Student View Controller-->
+        <scene sceneID="WfJ-Gg-xZf">
+            <objects>
+                <viewController id="gcI-nc-JxP" customClass="StudentViewController" customModule="BroTooth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sk8-ej-sEh"/>
+                        <viewControllerLayoutGuide type="bottom" id="w7V-Q0-D33"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fwg-jL-I9b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w2-Fk-mN1">
+                                <rect key="frame" x="275" y="338" width="51" height="30"/>
+                                <state key="normal" title="I Get It!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressIGetItButton:" destination="gcI-nc-JxP" eventType="touchUpInside" id="j6O-vf-42E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-6a-fPY">
+                                <rect key="frame" x="282" y="285" width="36" height="30"/>
+                                <state key="normal" title="Help!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressHelpButton:" destination="gcI-nc-JxP" eventType="touchUpInside" id="JNx-jE-fp1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2w2-Fk-mN1" firstAttribute="top" secondItem="Emj-6a-fPY" secondAttribute="bottom" constant="23" id="CrQ-Ml-mnD"/>
+                            <constraint firstAttribute="centerY" secondItem="Emj-6a-fPY" secondAttribute="centerY" id="bMP-vq-8VX"/>
+                            <constraint firstAttribute="centerX" secondItem="Emj-6a-fPY" secondAttribute="centerX" id="gEc-uB-TtG"/>
+                            <constraint firstAttribute="centerX" secondItem="2w2-Fk-mN1" secondAttribute="centerX" id="mCC-vk-PaO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zef-wm-Cal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="347"/>
+        </scene>
+    </scenes>
+</document>
